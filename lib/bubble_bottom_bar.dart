@@ -123,7 +123,9 @@ class _BottomNavigationTile extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     _TileIcon(
-                      colorTween: colorTween!,
+                      colorTween: colorTween ??
+                          ColorTween(
+                              begin: Colors.green[100], end: Colors.green[300]),
                       animation: animation,
                       iconSize: iconSize,
                       selected: selected,
